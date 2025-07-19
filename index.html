@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Md. Tasnim Ferdous" />
+  <title>Wave Runner</title>
+  <link rel="stylesheet" href="tsunami.css">
+  <link rel="shortcut icon" href="Favicon/tf.jpg" type="image/x-icon">
+</head>
+<body>
+  <!-- Wave Progress Bar -->
+  <div id="wave-progress"></div>
+  <h1 id="header">Wave Runner</h1>
+
+  <!-- Canvas -->
+  <canvas id="gameCanvas" width="800" height="480"></canvas>
+
+  <!-- Start Screen -->
+  <div id="start-screen" class="visible">
+    <h1>Wave Runner</h1>
+    <p>Escape the tsunami wave, survive the traps, and collect power-ups!</p>
+    <button id="start-btn">Start Game</button>
+    <button onclick="showPopup('rules-popup')"> Rules </button>
+    <button onclick="showPopup('tutorial-popup')"> Tutorial </button>
+  </div>
+
+  <!-- Rules Popup -->
+  <div id="rules-popup" class="popup">
+    <h2>Rules</h2>
+    <ul>
+      <li>Please use desktop mode if you are using mobile phone</li>
+      <li>Run right to escape the tsunami wave</li>
+      <li>Use arrow keys or WASD to move/jump</li>
+      <li>Avoid traps, enemies, and falling</li>
+      <li>Collect power-ups to gain speed</li>
+    </ul>
+    <button onclick="hidePopup('rules-popup')">Close</button>
+  </div>
+
+  <!-- Tutorial Popup -->
+  <div id="tutorial-popup" class="popup">
+    <h2>Tutorial</h2>
+    <ul>
+      <li>Your goal is to escape the tsunami that's constantly chasing you. You can see how far the wave is from you by the wave progress bar at the top!</li>
+      <li>Use Left/Right arrows or A/D to move</li>
+      <li>Use W, Up arrow, or Space key to jump</li>
+      <li>Power-ups (Green square) make you faster temporarily</li>
+      <li>Avoid traps (Yellow triangle) and enemies (Red sqaure)</li>
+      <li>Don't fall down!</li>
+    </ul>
+    <button onclick="hidePopup('tutorial-popup')"> Close </button>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="game-over" class="hidden">
+    <h2>Game Over</h2>
+    <h3>Your Score: <span id="game-over-score"></span></h3>
+    <p>You were caught by the wave or hit an obstacle!</p>
+    <button id="restart-btn">Restart</button>
+  </div>
+
+  <!-- Audio -->
+  <audio id="bgMusic" loop>
+    <source src="Musics/background.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="waveWarning">
+    <source src="Musics/wave-warning.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="gameOverMusic">
+    <source src="Musics/game-over.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="powerUpMusic">
+    <source src="Musics/power-up.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="levelUpMusic">
+    <source src="Musics/level-up.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script>
+    function showPopup(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+    function hidePopup(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+</body>
+</html>
