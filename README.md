@@ -9,6 +9,11 @@
 
 ---
 
+## 📷 Screenshot
+![Wave Runner Banner](https://hc-cdn.hel1.your-objectstorage.com/s/v3/08a40c7c5f0dce68db5b9f04c043c33ee5621974_screenshot__60_.png)
+
+---
+
 ## 🎮 Gameplay
 
 - **Objective**: Escape the tsunami for as long as possible.
